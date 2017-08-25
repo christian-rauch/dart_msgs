@@ -50,6 +50,7 @@ add_message_files(
     FILES
     ImageSegments.msg
     ImageClassProbability.msg
+    LabelColours.msg
 )
 
 ## Generate services in the 'srv' folder
