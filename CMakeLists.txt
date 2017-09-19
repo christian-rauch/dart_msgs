@@ -10,6 +10,7 @@ project(image_classification_msgs)
 find_package(catkin REQUIRED COMPONENTS
   message_generation
   std_msgs
+  geometry_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -49,11 +50,7 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(DIRECTORY msg)
 
 ## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )
+add_service_files(DIRECTORY srv)
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -66,6 +63,7 @@ add_message_files(DIRECTORY msg)
 generate_messages(
     DEPENDENCIES
     std_msgs
+    geometry_msgs
 )
 
 ################################################
